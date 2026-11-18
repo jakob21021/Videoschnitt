@@ -36,3 +36,20 @@ Erstes echtes Projekt der KI-Schnitt-Pipeline. Verwandt: [[KI-Videoschnitt-Doku-
 - [ ] Ortsnamen für die Nachtclips prüfen (IMG_5102 Säulengebäude, IMG_5171/5172), aktuell nur „Berlin bei Nacht“
 - [ ] Alternative: echten Song oder Instagram-Sound statt synthetischer Musik → Schnitte neu auf dessen BPM
 - [ ] Selfie: sind alle mit dem Posten einverstanden?
+
+---
+
+## v2 „Street“ (Feedback: zu viel Text, zu langsam, mehr Street-Style)
+- `animationen/out/Berlin-Street_Instagram.mp4`: 26,2 s, ca. −12 LUFS
+- **Text reduziert:** keine Ortsmarken und Tages-Labels mehr; nur noch BERLIN im Intro (ein Buchstabe pro Beat) und am Ende (Outline)
+- **Tempo:** 150 BPM, Schnitte alle 1–4 Beats (0,4–1,6 s); Speed Ramps 1,25–2×
+- **Effekte:** Zoom-Punch + Blur + Whip bei jedem Schnitt, Shake + Bump auf jede Kick, Flashes auf Drops, 4-Frame-Stutter, stärkeres Korn
+- **Grading:** härterer Kontrast, gedrückte Schwarztöne, kühler, weniger Sättigung (`scripts/berlin_street_prep.sh`)
+- **Musik:** `scripts/musik_street.py`, Phonk-artig (808, Cowbell-Melodie, Trap-Hats), Drop 1 auf Beat 8, Breakdown (U-Bahn → Nacht), Drop 2 auf Beat 48
+- **Denkmal-Foto bewusst rausgelassen:** passt als Gedenkort nicht in einen schnellen Hype-Edit
+- Code: `animationen/src/BerlinStreet.tsx` (Shot-Liste oben in der Datei, leicht umzustellen)
+
+### Erkenntnisse zum Street-Stil
+- Schnitte auf Beat und Bass; Effekte (Punch, Shake, Flash) nur auf Kicks, sonst wirkt es unruhig
+- Wenig bis kein Text; Typografie groß und kurz (eine fette Schrift wie Anton)
+- Breakdown in der Mitte gibt dem zweiten Drop Wirkung

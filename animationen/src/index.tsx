@@ -4,6 +4,7 @@ import {KapitelTitel} from './KapitelTitel';
 import {Struktur} from './Struktur';
 import {Zahl} from './Zahl';
 import {Berlin, BERLIN_DAUER} from './Berlin';
+import {BerlinStreet, STREET_DAUER} from './BerlinStreet';
 
 const FORMAT = {width: 1080, height: 1920, fps: 30};
 
@@ -40,6 +41,7 @@ const Root: React.FC = () => (
       defaultProps={{zahl: 850, oben: 'AM ASG HABEN', unten: ['Schüler:innen', 'eine Stimme.']}}
     />
     <Composition id="Berlin" component={Berlin} durationInFrames={BERLIN_DAUER} {...FORMAT} />
+    <Composition id="BerlinStreet" component={BerlinStreet} durationInFrames={STREET_DAUER} {...FORMAT} />
   </>
 );
 
