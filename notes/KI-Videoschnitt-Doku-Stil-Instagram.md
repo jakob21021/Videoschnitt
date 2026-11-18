@@ -88,3 +88,9 @@ Komplett „auf Knopfdruck kinoreif“ gibt es nicht. Was den Doku-Stil ausmacht
 - [ ] Ein Beispiel-Reel als Stilreferenz festlegen
 - [ ] Testmaterial (Clips plus Thema) bereitstellen
 - [ ] Entscheiden: Weg A, Weg B oder Kombination
+
+## Ordnerstruktur im Repo
+- `Rohdateien/<Projekt>/`: unbearbeitetes Material
+- `Ergebnisse/<Projekt>/`: fertige Exporte (`<Projekt>-v<Nr>-<Stil>.mp4`)
+- `Beispiele/`: Referenzen & Inspiration (`links.md` für Links)
+- Mediendateien sind per `.gitignore` vom Repo ausgeschlossen (Größe, Privatsphäre); Übergabe per Chat oder Google Drive

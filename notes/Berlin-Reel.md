@@ -53,3 +53,9 @@ Erstes echtes Projekt der KI-Schnitt-Pipeline. Verwandt: [[KI-Videoschnitt-Doku-
 - Schnitte auf Beat und Bass; Effekte (Punch, Shake, Flash) nur auf Kicks, sonst wirkt es unruhig
 - Wenig bis kein Text; Typografie groß und kurz (eine fette Schrift wie Anton)
 - Breakdown in der Mitte gibt dem zweiten Drop Wirkung
+
+### v2.1 (Feedback: „Ruckeln finde ich nicht gut“)
+- Entfernt: Shake/Drehung auf den Kicks, seitlicher Ruck (Whip) bei Schnitten, 4-Frame-Stutter
+- Geblieben: weicher Zoom-Punch beim Schnitt (1,10 → 1,0), dezenter Puls auf dem Bass (2 %), Flashes auf den Drops
+- **Merke für künftige Edits: kein Kamerawackeln / keine Shakes**
+- Export: `Ergebnisse/Berlin/Berlin-v2-Street.mp4`

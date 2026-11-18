@@ -2,3 +2,11 @@ node_modules/
 # Rohmaterial & große Renderings nicht ins Repo
 animationen/public/berlin/
 animationen/out/Berlin-*
+
+# Mediendateien in den Projektordnern nicht ins Repo
+Rohdateien/**/*.*
+Ergebnisse/**/*.*
+Beispiele/**/*.*
+!**/README.md
+!**/.gitkeep
+!Beispiele/links.md
