@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Bereitet die Berlin-Clips vor: Trimmen, Tempo, 1080x1920/30fps, Color Grading.
-# Aufruf: scripts/berlin_prep.sh <ordner-mit-rohmaterial>
+# Aufruf: scripts/berlin_prep.sh ../Rohdateien/Berlin
 set -euo pipefail
 SRC="$1"; OUT="$(dirname "$0")/../public/berlin"; mkdir -p "$OUT"
 
@@ -18,18 +18,18 @@ clip () { # name datei start dauer_quelle tempo look
   echo "  $name.mp4"
 }
 
-clip 01-intro     de013542-IMG_5067.mov 0.0  4.8  1    "$TAG"
-clip 02-tor       b3f70c3b-IMG_5084.mov 0.2  2.4  1    "$TAG"
-clip 04-saeulen   b27dcc09-IMG_5102.mov 0.0  1.92 1.25 "$NACHT"
-clip 05-dom       b49d6f6d-IMG_5105.mov 1.6  2.4  1    "$NACHT"
-clip 06-bikini    c7a14857-IMG_5124.mov 0.8  2.4  1    "$TAG"
-clip 07-kirche    e38c4588-IMG_5123.mov 1.9  2.4  1    "$TAG"
-clip 08-alex      452ddc78-IMG_5131.mov 0.1  4.8  1    "$TAG"
-clip 10-nacht1    6e6aa8c1-IMG_5171.mov 1.9  2.4  1    "$DUNKEL"
-clip 11-nacht2    6672999e-IMG_5172.mov 0.4  2.4  1    "$DUNKEL"
-clip 12-selfie    c2cdc4ed-4E63D808-9767-4869-8C59-F7AD75D73322.mov 1.4 4.8 1 "$NACHT"
+clip 01-intro     IMG_5067.mov 0.0  4.8  1    "$TAG"
+clip 02-tor       IMG_5084.mov 0.2  2.4  1    "$TAG"
+clip 04-saeulen   IMG_5102.mov 0.0  1.92 1.25 "$NACHT"
+clip 05-dom       IMG_5105.mov 1.6  2.4  1    "$NACHT"
+clip 06-bikini    IMG_5124.mov 0.8  2.4  1    "$TAG"
+clip 07-kirche    IMG_5123.mov 1.9  2.4  1    "$TAG"
+clip 08-alex      IMG_5131.mov 0.1  4.8  1    "$TAG"
+clip 10-nacht1    IMG_5171.mov 1.9  2.4  1    "$DUNKEL"
+clip 11-nacht2    IMG_5172.mov 0.4  2.4  1    "$DUNKEL"
+clip 12-selfie    4E63D808-9767-4869-8C59-F7AD75D73322.mov 1.4 4.8 1 "$NACHT"
 
 # Fotos: 3:4 -> 9:16 (Höhe 2400 für Ken-Burns-Spielraum)
-ffmpeg -loglevel error -y -i "$SRC/8dc3336a-image.jpg" -vf "scale=-2:2400,crop=1350:2400,hue=s=0.25,eq=contrast=1.1:gamma=0.95" -q:v 2 "$OUT/03-denkmal.jpg"
-ffmpeg -loglevel error -y -i "$SRC/0f7786db-image.jpg" -vf "scale=-2:2400,crop=1350:2400,eq=contrast=1.05:saturation=1.05,colorbalance=bs=0.03:rh=0.03" -q:v 2 "$OUT/09-ubahn.jpg"
+ffmpeg -loglevel error -y -i "$SRC/IMG_5140.jpeg" -vf "scale=-2:2400,crop=1350:2400,hue=s=0.25,eq=contrast=1.1:gamma=0.95" -q:v 2 "$OUT/03-denkmal.jpg"
+ffmpeg -loglevel error -y -i "$SRC/IMG_5162.jpeg" -vf "scale=-2:2400,crop=1350:2400,eq=contrast=1.05:saturation=1.05,colorbalance=bs=0.03:rh=0.03" -q:v 2 "$OUT/09-ubahn.jpg"
 echo "  Fotos fertig"
