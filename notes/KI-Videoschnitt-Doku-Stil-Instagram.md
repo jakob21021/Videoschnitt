@@ -73,6 +73,14 @@ Wege, wie Rohmaterial in die Claude-Code-Session kommt:
 Was Claude am Material macht: Transkript (Whisper), Standbilder in Abständen ansehen, Schnittliste vorschlagen, schneiden, 9:16, Look, Untertitel, Animationen, Export.
 Grenzen: Claude sieht Einzelbilder und Text, nicht das laufende Video mit Gefühl → Feedback-Runden einplanen. Kein GPU → Rendern dauert etwas länger, für Reels kein Problem. Musik muss lizenziert sein (selbst mitbringen).
 
+## So entstand die SV-Demo (Remotion)
+1. **Animation als Code:** Jede Animation ist eine React-Komponente. Remotion liefert die aktuelle Bildnummer (`useCurrentFrame`), daraus werden Position, Deckkraft und Größe berechnet (`interpolate` + Easing-Kurven)
+2. **Stil zentral** in `animationen/src/stil.tsx`: Farben, Schrift (Inter Display), Film-Look = SVG-Rauschen als Korn (wechselt jedes Bild) + Vignette + Ein- und Ausblenden
+3. **Texte als Parameter** in `src/index.tsx` → dieselbe Animation ist für andere Inhalte wiederverwendbar
+4. **Kontrolle:** einzelne Standbilder rendern (`remotion still`) und ansehen, dann korrigieren
+5. **Rendern:** `remotion render` → Headless-Browser rendert 1080×1920 bei 30 fps Bild für Bild → MP4
+6. **Zusammenfügen:** die drei Clips mit ffmpeg aneinandergehängt (`concat`) → `SV-Demo.mp4`
+
 ## Realistische Erwartung
 Komplett „auf Knopfdruck kinoreif“ gibt es nicht. Was den Doku-Stil ausmacht (Story, Timing, Sound), braucht deinen Geschmack. Die KI spart vor allem die Fleißarbeit.
 
