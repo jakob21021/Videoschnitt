@@ -1,1 +1,4 @@
 node_modules/
+# Rohmaterial & große Renderings nicht ins Repo
+animationen/public/berlin/
+animationen/out/Berlin-*

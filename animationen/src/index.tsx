@@ -3,6 +3,7 @@ import {Composition, registerRoot} from 'remotion';
 import {KapitelTitel} from './KapitelTitel';
 import {Struktur} from './Struktur';
 import {Zahl} from './Zahl';
+import {Berlin, BERLIN_DAUER} from './Berlin';
 
 const FORMAT = {width: 1080, height: 1920, fps: 30};
 
@@ -38,6 +39,7 @@ const Root: React.FC = () => (
       {...FORMAT}
       defaultProps={{zahl: 850, oben: 'AM ASG HABEN', unten: ['Schüler:innen', 'eine Stimme.']}}
     />
+    <Composition id="Berlin" component={Berlin} durationInFrames={BERLIN_DAUER} {...FORMAT} />
   </>
 );
 
