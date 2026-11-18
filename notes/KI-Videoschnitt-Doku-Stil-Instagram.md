@@ -63,6 +63,16 @@ Tools:
 
 Idee für die Pipeline: Claude erzeugt aus dem Skript eine Liste von Animationen (z. B. „Sek. 4: Karte Berlin → Lissabon“, „Sek. 12: Zahl 3.000 km“). Remotion rendert diese als Overlays im eigenen Stil (Schrift, Farben). ffmpeg oder Resolve legt sie über den Schnitt.
 
+## Videos direkt an Claude schicken
+Wege, wie Rohmaterial in die Claude-Code-Session kommt:
+1. **Google Drive (empfohlen):** Clips in einen Ordner laden, Ordnername nennen → Claude lädt sie herunter
+2. **Rechner verbinden:** über Remote Control im Claude-Desktop-App einen Ordner freigeben → Claude arbeitet direkt mit den Dateien und speichert das fertige Video dort
+3. **Im Chat anhängen:** geht für kurze Clips, große Dateien eher nicht
+4. *Nicht* über GitHub: dort sind Dateien auf 100 MB begrenzt, und Videos gehören nicht ins Repo
+
+Was Claude am Material macht: Transkript (Whisper), Standbilder in Abständen ansehen, Schnittliste vorschlagen, schneiden, 9:16, Look, Untertitel, Animationen, Export.
+Grenzen: Claude sieht Einzelbilder und Text, nicht das laufende Video mit Gefühl → Feedback-Runden einplanen. Kein GPU → Rendern dauert etwas länger, für Reels kein Problem. Musik muss lizenziert sein (selbst mitbringen).
+
 ## Realistische Erwartung
 Komplett „auf Knopfdruck kinoreif“ gibt es nicht. Was den Doku-Stil ausmacht (Story, Timing, Sound), braucht deinen Geschmack. Die KI spart vor allem die Fleißarbeit.
 
