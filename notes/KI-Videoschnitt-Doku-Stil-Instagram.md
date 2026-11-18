@@ -42,6 +42,27 @@ Ein Skript in diesem Repo, das:
 
 → Die KI liefert 80 % (Auswahl, Struktur, Rohschnitt, Technik), du gibst die letzten 20 % (Timing, Gefühl, Grading).
 
+## Animationen & Motion Graphics
+Typische Doku-Animationen:
+- **Karten-Animationen:** Route oder Linie wandert über eine Karte, Zoom auf einen Ort (Google Earth-artig)
+- **Kinetic Typography:** große Wörter oder Zahlen, die ins Bild fliegen, Kapitel-Titel
+- **Callouts:** Kreise, Pfeile, Markierungen, die auf etwas im Bild zeigen
+- **Fotos in 2.5D (Parallax):** Standbild wird in Ebenen zerlegt und bekommt so Tiefe
+- **Zeitungs- und Archiv-Look:** Artikel oder Screenshots in 3D, Highlight auf einem Satz
+- **Daten:** Zähler, Balken, Zeitstrahl
+- **Übergänge:** Whip Pan, Zoom, Glitch, Film Burn
+- **KI-generierte B-Roll:** Szenen, die man nicht filmen konnte (Veo, Runway, Kling, Sora; Bild-zu-Video)
+
+Tools:
+| Ansatz | Tools | Bewertung |
+|---|---|---|
+| Klassisch | After Effects (+ GEOlayers für Karten), DaVinci Fusion | maximale Kontrolle, aber Handarbeit |
+| Templates | Canva, CapCut, Motion Array / Envato Templates | schnell, wirkt aber schnell generisch |
+| **Code-Animationen (passt zu Weg B)** | **Remotion** (React → Video), Motion Canvas | Claude schreibt die Animationen selbst; Stil wiederverwendbar, voll automatisierbar |
+| Generativ | Veo, Runway, Kling, Sora, Depth-Parallax-Tools | für B-Roll und Foto-Animation |
+
+Idee für die Pipeline: Claude erzeugt aus dem Skript eine Liste von Animationen (z. B. „Sek. 4: Karte Berlin → Lissabon“, „Sek. 12: Zahl 3.000 km“). Remotion rendert diese als Overlays im eigenen Stil (Schrift, Farben). ffmpeg oder Resolve legt sie über den Schnitt.
+
 ## Realistische Erwartung
 Komplett „auf Knopfdruck kinoreif“ gibt es nicht. Was den Doku-Stil ausmacht (Story, Timing, Sound), braucht deinen Geschmack. Die KI spart vor allem die Fleißarbeit.
 
